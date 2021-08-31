@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>App</title>
+    <meta charset="utf-8">
+</head>
+<body onload="brython({cache: true, pythonpath: ['/static']})">
+    <div id="status"></div>
+    <div id="content"></div>
+
+    <script type="text/javascript" src="/static/brython-3.9.5/brython.min.js"></script>
+    <script type="text/javascript" src="/static/brython-3.9.5/brython_stdlib.js"></script>
+    <!--<script type="text/javascript" src="/static/brython-3.9.5/brython_modules.js"></script>-->
+    <script type="text/javascript" src="/static/socketio-4.1.2/socket.io.min.js"></script>
+    <script type="text/javascript" src="/static/marked-3.0.2/marked.min.js"></script>
+    <script type="text/javascript" src="/static/dompurify-2.3.1/purify.min.js"></script>
+    <script type="text/python">
+        import app
+    </script>
+</body>
+</html>

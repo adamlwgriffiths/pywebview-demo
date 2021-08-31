@@ -1,0 +1,4 @@
+__BRYTHON__.VFS_timestamp = 1630502094429
+__BRYTHON__.use_VFS = true
+var scripts = {"$timestamp": 1630502094429, "app": [".py", "from browser import window, document, alert\nio = window.io\n\n# brython has its own markdown renderer\n# but it doesnt currently render images correctly\n# https://github.com/brython-dev/brython/issues/1761\n# once its fixed, use brython's one instead\nmarked = window.marked\nDOMPurify = window.DOMPurify\n\n\nmarkdown = DOMPurify.sanitize(marked('''\n# Marked in the browser\n\nRendered by **marked**.\n'''))\ndocument['content'].innerHTML = markdown\n\n\n\nsocket = io()\ndef on_connect():\n    document['status'].innerHTML = ('connected in brython')\n    socket.emit('join', {'room': 'asd'})\n\nsocket.on('connect', on_connect)\n", ["browser", "browser.window", "browser.alert", "browser.document"], 1], "browser": [".py", "", [], 1]}
+__BRYTHON__.update_VFS(scripts)

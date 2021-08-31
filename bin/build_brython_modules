@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ROOT_DIR=$DIR/../app/static
+
+pushd $ROOT_DIR
+
+brython-cli --modules
+# TODO: minify brython_modules.js
+# https://github.com/brython-dev/brython/blob/master/scripts/python_minifier.py
+
+popd
+
+# https://github.com/brython-dev/brython/blob/4e55de03dfaaa9a48150cbeb8f1e0dc4e9d044df/setup/brython/__main__.py#L117
+# https://github.com/brython-dev/brython/blob/4e55de03dfaaa9a48150cbeb8f1e0dc4e9d044df/setup/brython/list_modules.py#L560

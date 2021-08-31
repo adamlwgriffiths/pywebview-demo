@@ -1,0 +1,8 @@
+PyGObject>3.40.1[gtk]
+cefpython3[windows]
+pywebview>=3.5
+git+https://github.com/adamlwgriffiths/cottonmouth/
+flask>=2.0.1
+flask-socketio>=5.1.1
+python-socketio>=5.4.0
+eventlet>=0.31.1
